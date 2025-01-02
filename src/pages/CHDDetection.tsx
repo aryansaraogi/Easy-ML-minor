@@ -213,16 +213,15 @@ export const CHDDetection = () => {
             {error && (
               <p className="mt-4 text-red-600 text-center">{error}</p>
             )}
-
             {result && (
               <div className="mt-6 p-4 bg-gray-50 rounded-md">
                 <h3 className="text-xl font-semibold mb-2">Analysis Result</h3>
                 <p className="text-gray-700">
-                  Risk Level: <span className="font-bold">{result.prediction}</span>
+                  Risk Level: <span className="font-bold">{result.Risk_Level}</span>
                 </p>
-                {result.probability !== undefined && (
+                {result.Probability !== undefined && (
                   <p className="text-gray-700">
-                    Probability: <span className="font-bold">{(result.probability * 100).toFixed(1)}%</span>
+                    Probability: <span className="font-bold">{result.Probability}</span>
                   </p>
                 )}
               </div>

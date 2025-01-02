@@ -50,7 +50,7 @@ def predict_chd():
         
         # Prepare response
         response = {
-            "Risk Level": risk_level,
+            "Risk_Level": risk_level,
             "Probability": f"{prediction_proba[0][1] * 100:.2f}%"  # Probability of having CHD
         }
         return jsonify(response), 200
