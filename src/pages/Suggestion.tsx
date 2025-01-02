@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export const Suggestion = () => {
   const [formData, setFormData] = useState({
@@ -12,14 +13,17 @@ export const Suggestion = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
-    
-    // EmailJS integration will be added here later
+
+    const serviceId = 'service_9hs1die'; // Replace with your EmailJS Service ID
+    const templateId = 'template_lvqr2zn'; // Replace with your EmailJS Template ID
+    const publicKey = 'up7Peaw4yhzp7_HRq'; // Replace with your EmailJS Public Key
+
     try {
-      // Placeholder for EmailJS send
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await emailjs.send(serviceId, templateId, formData, publicKey);
       setStatus('success');
       setFormData({ name: '', subject: '', suggestion: '' });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setStatus('error');
     }
   };
@@ -29,7 +33,7 @@ export const Suggestion = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-8">Share Your Suggestions</h1>
-          
+
           <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-8">
             <div className="mb-6">
               <label htmlFor="name" className="block text-gray-700 mb-2">Name</label>
@@ -92,4 +96,4 @@ export const Suggestion = () => {
       </div>
     </div>
   );
-}
+};
