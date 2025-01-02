@@ -9,7 +9,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Brain className="h-8 w-8" />
-            <span className="text-xl font-bold">ML Platform</span>
+            <span className="text-xl font-bold">EasyML</span>
           </Link>
           <div className="flex space-x-6">
             <Link to="/" className="hover:text-indigo-200 transition-colors">Home</Link>

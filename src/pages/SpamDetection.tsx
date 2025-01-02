@@ -9,6 +9,7 @@ export const SpamDetection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     await predict({ message });
+   
   };
 
   return (
@@ -19,7 +20,6 @@ export const SpamDetection = () => {
             <Shield className="h-12 w-12 text-green-500 mr-4" />
             <h1 className="text-4xl font-bold">Spam Detection</h1>
           </div>
-
           <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-8">
             <div className="mb-6">
               <label htmlFor="message" className="block text-gray-700 mb-2">Message</label>
