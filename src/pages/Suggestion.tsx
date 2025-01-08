@@ -14,9 +14,9 @@ export const Suggestion = () => {
     e.preventDefault();
     setStatus('loading');
 
-    const serviceId = 'service_9hs1die'; // Replace with your EmailJS Service ID
-    const templateId = 'template_lvqr2zn'; // Replace with your EmailJS Template ID
-    const publicKey = 'up7Peaw4yhzp7_HRq'; // Replace with your EmailJS Public Key
+    const serviceId = 'service_9hs1die';   // EmailJS Service ID
+    const templateId = 'template_lvqr2zn'; //  EmailJS Template ID
+    const publicKey = 'up7Peaw4yhzp7_HRq'; //  EmailJS Public Key
 
     try {
       await emailjs.send(serviceId, templateId, formData, publicKey);
