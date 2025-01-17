@@ -1,17 +1,27 @@
-EasyML Project
+# EasyML Project  
 
+EasyML is a web-based application integrating machine learning models with an interactive user interface.  
 
-This repository contains the EasyML Project, a web-based application integrating multiple machine learning models with an interactive user interface.
+## 📌 Tech Stack  
+- **Frontend:** React (TypeScript)  
+- **Backend:** Flask (Python)  
+- **Storage & Communication:** Email.js for handling suggestions  
 
-Tech Stack
-Frontend: React (TypeScript)
-Backend: Flask (Python)
-Storage & Communication: Email.js for handling suggestions
-Features
-Machine Learning Models:
-CHD Detection: Predicts the risk of Coronary Heart Disease
-Spam Detection: Identifies spam messages
-Suggestions Page: Users can submit feedback and ideas via Email.js
-This project aims to provide a seamless experience for leveraging ML models and gathering user insights effectively.
+## 🚀 Features  
+### 🧠 Machine Learning Models  
+- **CHD Detection:** Predicts the risk of Coronary Heart Disease  
+- **Spam Detection:** Identifies spam messages  
 
-This version enhances readability and structure while making key features stand out. Let me know if you'd like further refinements! 🚀
+### ✉️ Suggestions Page  
+- Users can submit feedback and ideas via Email.js  
+
+## 🛠 Setup Instructions  
+### Frontend  
+```sh
+cd frontend
+npm install
+npm run dev
+
+📬 Contact
+For suggestions or contributions, feel free to submit an issue or pull request!
+
